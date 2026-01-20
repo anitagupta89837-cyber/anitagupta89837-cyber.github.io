@@ -16,14 +16,14 @@
       scroll-behavior: smooth;
     }
 
-    /* ===== NAVBAR ===== */
+    /* NAVBAR */
     header {
       position: fixed;
       top: 0;
       width: 100%;
       background: rgba(0,0,0,0.85);
       color: #fff;
-      padding: 15px 30px;
+      padding: 15px 25px;
       display: flex;
       justify-content: space-between;
       align-items: center;
@@ -36,111 +36,113 @@
 
     nav a {
       color: #fff;
+      margin-left: 15px;
       text-decoration: none;
-      margin-left: 20px;
       font-size: 14px;
     }
 
-    nav a:hover {
-      color: #00ffcc;
-    }
-
-    /* ===== HERO SECTION ===== */
+    /* HERO */
     .hero {
       height: 100vh;
-      background: linear-gradient(120deg, #000000, #1f1f1f);
-      color: white;
+      background: linear-gradient(
+        rgba(0,0,0,0.6),
+        rgba(0,0,0,0.6)
+      ),
+      url("https://images.unsplash.com/photo-1522202176988-66273c2fd55f");
+      background-size: cover;
+      background-position: center;
+      color: #fff;
       display: flex;
-      flex-direction: column;
-      justify-content: center;
       align-items: center;
+      justify-content: center;
       text-align: center;
       padding: 20px;
-      animation: fadeIn 1.5s ease;
+    }
+
+    .hero-content {
+      animation: fadeUp 1.5s ease;
     }
 
     .hero h2 {
-      font-size: 42px;
+      font-size: 36px;
       margin-bottom: 15px;
-      animation: slideUp 1.2s ease;
     }
 
     .hero p {
-      max-width: 700px;
       font-size: 16px;
-      opacity: 0.9;
-      animation: slideUp 1.5s ease;
+      max-width: 600px;
+      margin: auto;
+      margin-bottom: 25px;
     }
 
-    .hero button {
-      margin-top: 25px;
-      padding: 14px 30px;
-      border: none;
-      background: #00ffcc;
+    .btn {
+      padding: 12px 25px;
+      background: #00e0b8;
       color: #000;
-      font-size: 16px;
-      cursor: pointer;
-      border-radius: 5px;
-      animation: slideUp 1.8s ease;
+      text-decoration: none;
+      font-weight: bold;
+      border-radius: 4px;
     }
 
-    .hero button:hover {
-      background: #00ccaa;
-    }
-
-    /* ===== SECTIONS ===== */
-    section {
-      padding: 80px 20px;
+    /* SERVICES */
+    .services {
+      padding: 60px 20px;
+      background: #f4f4f4;
       text-align: center;
     }
 
-    section h3 {
+    .services h2 {
+      margin-bottom: 30px;
       font-size: 28px;
-      margin-bottom: 15px;
     }
 
-    section p {
-      max-width: 800px;
-      margin: auto;
-      font-size: 16px;
-      color: #333;
+    .service-box {
+      background: #fff;
+      padding: 20px;
+      margin: 15px auto;
+      max-width: 400px;
+      border-radius: 8px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+      animation: fadeUp 1s ease;
     }
 
-    /* ===== CONTACT ===== */
-    .contact a {
-      display: block;
-      margin: 12px 0;
-      font-size: 16px;
-      color: #000;
-      text-decoration: none;
-    }
-
-    .contact a:hover {
-      color: #00aa88;
-    }
-
-    footer {
+    /* CONTACT */
+    .contact {
+      padding: 50px 20px;
       background: #000;
       color: #fff;
       text-align: center;
-      padding: 20px;
-      font-size: 14px;
     }
 
-    /* ===== ANIMATIONS ===== */
-    @keyframes fadeIn {
-      from { opacity: 0; }
-      to { opacity: 1; }
+    .contact p {
+      margin: 10px 0;
+      font-size: 15px;
     }
 
-    @keyframes slideUp {
+    /* WHATSAPP FLOAT */
+    .whatsapp-float {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      background: #25d366;
+      color: #fff;
+      font-size: 26px;
+      padding: 14px 16px;
+      border-radius: 50%;
+      text-decoration: none;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.4);
+      z-index: 9999;
+    }
+
+    /* ANIMATION */
+    @keyframes fadeUp {
       from {
-        transform: translateY(40px);
         opacity: 0;
+        transform: translateY(30px);
       }
       to {
-        transform: translateY(0);
         opacity: 1;
+        transform: translateY(0);
       }
     }
   </style>
@@ -148,64 +150,65 @@
 
 <body>
 
-  <!-- NAVBAR -->
+  <!-- NAV -->
   <header>
     <h1>Aryan Web Studio</h1>
     <nav>
       <a href="#home">Home</a>
-      <a href="#about">About</a>
+      <a href="#services">Services</a>
       <a href="#contact">Contact</a>
     </nav>
   </header>
 
   <!-- HERO -->
   <section class="hero" id="home">
-    <h2>Aryan Web Studio</h2>
-    <p>
-      Professional Website Developer. I create modern, fast and mobile-friendly
-      websites for business, gym, restaurant and personal brands.
-    </p>
-    <button onclick="scrollToContact()">Contact Me</button>
+    <div class="hero-content">
+      <h2>Aryan Web Studio</h2>
+      <p>
+        Professional Website Developer. I create modern, fast and
+        mobile-friendly websites for business, gym, restaurant and
+        personal brands.
+      </p>
+      <a href="#contact" class="btn">Contact Me</a>
+    </div>
   </section>
 
-  <!-- ABOUT -->
-  <section id="about">
-    <h3>About Me</h3>
-    <p>
-      I build clean, responsive and professional websites that help businesses
-      grow online. My goal is to deliver fast loading, modern design and
-      conversion-focused websites for my clients.
-    </p>
+  <!-- SERVICES -->
+  <section class="services" id="services">
+    <h2>My Services</h2>
+
+    <div class="service-box">
+      <h3>Business Websites</h3>
+      <p>Professional websites for shops, gyms & companies.</p>
+    </div>
+
+    <div class="service-box">
+      <h3>Restaurant / Cafe</h3>
+      <p>Menu, WhatsApp order & Google map integration.</p>
+    </div>
+
+    <div class="service-box">
+      <h3>Personal Portfolio</h3>
+      <p>Creators, freelancers & influencers ke liye.</p>
+    </div>
   </section>
 
   <!-- CONTACT -->
-  <section id="contact" class="contact">
-    <h3>Contact Me</h3>
-
-    <a href="tel:8587017626">📞 Call: 8587017626</a>
-
-    <a href="https://wa.me/918587017626" target="_blank">
-      💬 WhatsApp: 8587017626
-    </a>
-
-    <a href="mailto:anitagupta89837@gmail.com">
-      📧 Email: anitagupta89837@gmail.com
-    </a>
-
-    <a href="https://instagram.com/Cristhien_" target="_blank">
-      📷 Instagram: @Cristhien_
-    </a>
+  <section class="contact" id="contact">
+    <h2>Contact Me</h2>
+    <p>📞 8587017626</p>
+    <p>📧 anitagupta89837@gmail.com</p>
+    <p>📸 Instagram: @Cristhien_</p>
   </section>
 
-  <footer>
-    © 2026 Aryan Web Studio. All rights reserved.
-  </footer>
-
-  <script>
-    function scrollToContact() {
-      document.getElementById("contact").scrollIntoView({ behavior: "smooth" });
-    }
-  </script>
+  <!-- WHATSAPP -->
+  <a
+    href="https://wa.me/918587017626?text=Hi%20Aryan,%20I%20want%20a%20website"
+    class="whatsapp-float"
+    target="_blank"
+  >
+    💬
+  </a>
 
 </body>
-</html>
+      </html> 
