@@ -1,214 +1,212 @@
 
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Aryan Web Studio</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Christian Web Services | Professional Websites</title>
 
-  <style>
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-      font-family: Arial, Helvetica, sans-serif;
-    }
+<!-- GOOGLE FONT -->
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
 
-    body {
-      scroll-behavior: smooth;
-    }
+<style>
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+  font-family:'Poppins',sans-serif;
+}
+body{
+  background:#fff;
+  color:#333;
+}
 
-    /* NAVBAR */
-    header {
-      position: fixed;
-      top: 0;
-      width: 100%;
-      background: rgba(0,0,0,0.85);
-      color: #fff;
-      padding: 15px 25px;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      z-index: 1000;
-    }
+/* HERO */
+.hero{
+  height:100vh;
+  background:
+    linear-gradient(rgba(0,0,0,0.6),rgba(0,0,0,0.6)),
+    url('https://images.unsplash.com/photo-1498050108023-c5249f4df085');
+  background-size:cover;
+  background-position:center;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  text-align:center;
+  color:#fff;
+}
+.hero h1{
+  font-size:42px;
+  animation:fadeDown 1.5s ease;
+}
+.hero p{
+  margin:15px 0 25px;
+  font-size:18px;
+  animation:fadeUp 2s ease;
+}
+.hero a{
+  padding:12px 30px;
+  background:#00bfa6;
+  color:#000;
+  text-decoration:none;
+  border-radius:30px;
+  font-weight:600;
+}
 
-    header h1 {
-      font-size: 18px;
-    }
+/* SECTIONS */
+section{
+  padding:70px 20px;
+  text-align:center;
+}
+h2{
+  margin-bottom:20px;
+  font-size:32px;
+  color:#111;
+}
 
-    nav a {
-      color: #fff;
-      margin-left: 15px;
-      text-decoration: none;
-      font-size: 14px;
-    }
+/* SERVICES */
+.services-box{
+  display:flex;
+  flex-wrap:wrap;
+  justify-content:center;
+  gap:20px;
+}
+.card{
+  width:260px;
+  padding:25px;
+  border-radius:15px;
+  box-shadow:0 10px 20px rgba(0,0,0,0.1);
+}
+.card span{
+  font-size:30px;
+}
 
-    /* HERO */
-    .hero {
-      height: 100vh;
-      background: linear-gradient(
-        rgba(0,0,0,0.6),
-        rgba(0,0,0,0.6)
-      ),
-      url("https://images.unsplash.com/photo-1522202176988-66273c2fd55f");
-      background-size: cover;
-      background-position: center;
-      color: #fff;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      text-align: center;
-      padding: 20px;
-    }
+/* PRICING */
+.pricing{
+  background:#000;
+  color:#fff;
+}
+.price-box{
+  background:#111;
+  padding:30px;
+  max-width:300px;
+  margin:20px auto;
+  border-radius:20px;
+}
+.price-box h3{
+  color:#00bfa6;
+  font-size:26px;
+}
 
-    .hero-content {
-      animation: fadeUp 1.5s ease;
-    }
+/* PAYMENT */
+.payment span{
+  display:inline-block;
+  margin:10px;
+  padding:10px 18px;
+  background:#111;
+  color:#fff;
+  border-radius:20px;
+}
 
-    .hero h2 {
-      font-size: 36px;
-      margin-bottom: 15px;
-    }
+/* TESTIMONIALS */
+.testimonial{
+  max-width:500px;
+  margin:15px auto;
+  padding:25px;
+  background:#f9f9f9;
+  border-radius:15px;
+}
 
-    .hero p {
-      font-size: 16px;
-      max-width: 600px;
-      margin: auto;
-      margin-bottom: 25px;
-    }
+/* CONTACT */
+.contact{
+  background:linear-gradient(135deg,#000,#222);
+  color:#fff;
+}
+.contact a{
+  display:block;
+  color:#00bfa6;
+  text-decoration:none;
+  margin:10px 0;
+  font-weight:600;
+}
 
-    .btn {
-      padding: 12px 25px;
-      background: #00e0b8;
-      color: #000;
-      text-decoration: none;
-      font-weight: bold;
-      border-radius: 4px;
-    }
+/* FOOTER */
+footer{
+  background:#000;
+  color:#aaa;
+  text-align:center;
+  padding:15px;
+}
 
-    /* SERVICES */
-    .services {
-      padding: 60px 20px;
-      background: #f4f4f4;
-      text-align: center;
-    }
-
-    .services h2 {
-      margin-bottom: 30px;
-      font-size: 28px;
-    }
-
-    .service-box {
-      background: #fff;
-      padding: 20px;
-      margin: 15px auto;
-      max-width: 400px;
-      border-radius: 8px;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-      animation: fadeUp 1s ease;
-    }
-
-    /* CONTACT */
-    .contact {
-      padding: 50px 20px;
-      background: #000;
-      color: #fff;
-      text-align: center;
-    }
-
-    .contact p {
-      margin: 10px 0;
-      font-size: 15px;
-    }
-
-    /* WHATSAPP FLOAT */
-    .whatsapp-float {
-      position: fixed;
-      bottom: 20px;
-      right: 20px;
-      background: #25d366;
-      color: #fff;
-      font-size: 26px;
-      padding: 14px 16px;
-      border-radius: 50%;
-      text-decoration: none;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.4);
-      z-index: 9999;
-    }
-
-    /* ANIMATION */
-    @keyframes fadeUp {
-      from {
-        opacity: 0;
-        transform: translateY(30px);
-      }
-      to {
-        opacity: 1;
-        transform: translateY(0);
-      }
-    }
-  </style>
+/* ANIMATION */
+@keyframes fadeDown{
+  from{opacity:0;transform:translateY(-40px)}
+  to{opacity:1;transform:translateY(0)}
+}
+@keyframes fadeUp{
+  from{opacity:0;transform:translateY(40px)}
+  to{opacity:1;transform:translateY(0)}
+}
+</style>
 </head>
 
 <body>
 
-  <!-- NAV -->
-  <header>
-    <h1>Aryan Web Studio</h1>
-    <nav>
-      <a href="#home">Home</a>
-      <a href="#services">Services</a>
-      <a href="#contact">Contact</a>
-    </nav>
-  </header>
+<!-- HERO -->
+<div class="hero">
+  <div>
+    <h1>Christian Website Services ✝️</h1>
+    <p>I design professional websites for Gym, Cafe, Restaurant & Business</p>
+    <a href="https://wa.me/918587017626" target="_blank">Chat on WhatsApp</a>
+  </div>
+</div>
 
-  <!-- HERO -->
-  <section class="hero" id="home">
-    <div class="hero-content">
-      <h2>Aryan Web Studio</h2>
-      <p>
-        Professional Website Developer. I create modern, fast and
-        mobile-friendly websites for business, gym, restaurant and
-        personal brands.
-      </p>
-      <a href="#contact" class="btn">Contact Me</a>
-    </div>
-  </section>
+<!-- SERVICES -->
+<section>
+  <h2>My Services</h2>
+  <div class="services-box">
+    <div class="card"><span>💻</span><h3>Website Design</h3><p>Modern & Mobile Friendly</p></div>
+    <div class="card"><span>📱</span><h3>WhatsApp Integration</h3><p>Auto customer contact</p></div>
+    <div class="card"><span>⚡</span><h3>Fast Loading</h3><p>SEO friendly sites</p></div>
+  </div>
+</section>
 
-  <!-- SERVICES -->
-  <section class="services" id="services">
-    <h2>My Services</h2>
+<!-- PRICING -->
+<section class="pricing">
+  <h2>Website Pricing</h2>
+  <div class="price-box">
+    <h3>₹2999</h3>
+    <p>1 Page Website</p>
+    <p>WhatsApp Button</p>
+    <p>Free Support</p>
+  </div>
+</section>
 
-    <div class="service-box">
-      <h3>Business Websites</h3>
-      <p>Professional websites for shops, gyms & companies.</p>
-    </div>
+<!-- PAYMENT -->
+<section class="payment">
+  <h2>Payment Methods</h2>
+  <span>UPI</span>
+  <span>PhonePe</span>
+  <span>Google Pay</span>
+  <span>Paytm</span>
+</section>
 
-    <div class="service-box">
-      <h3>Restaurant / Cafe</h3>
-      <p>Menu, WhatsApp order & Google map integration.</p>
-    </div>
+<!-- TESTIMONIALS -->
+<section>
+  <h2>Client Reviews</h2>
+  <div class="testimonial">“Very professional website, loved the design.”</div>
+  <div class="testimonial">“Fast delivery and good support.”</div>
+</section>
 
-    <div class="service-box">
-      <h3>Personal Portfolio</h3>
-      <p>Creators, freelancers & influencers ke liye.</p>
-    </div>
-  </section>
+<!-- CONTACT -->
+<section class="contact">
+  <h2>Contact Me</h2>
+  <a href="tel:8587017626">📞 8587017626</a>
+  <a href="mailto:anitagupta89837@gmail.com">📧 anitagupta89837@gmail.com</a>
+  <a href="https://instagram.com/Cristhien_" target="_blank">📸 Instagram: Cristhien_</a>
+</section>
 
-  <!-- CONTACT -->
-  <section class="contact" id="contact">
-    <h2>Contact Me</h2>
-    <p>📞 8587017626</p>
-    <p>📧 anitagupta89837@gmail.com</p>
-    <p>📸 Instagram: @Cristhien_</p>
-  </section>
-
-  <!-- WHATSAPP -->
-  <a
-    href="https://wa.me/918587017626?text=Hi%20Aryan,%20I%20want%20a%20website"
-    class="whatsapp-float"
-    target="_blank"
-  >
-    💬
-  </a>
+<footer>
+  © 2026 Christian Web Services | All Rights Reserved
+</footer>
 
 </body>
-      </html> 
+      </html>
