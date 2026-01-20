@@ -4,39 +4,38 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Aryan Web Studio</title>
 
-<!-- FONT + ICONS -->
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 
 <style>
-*{margin:0;padding:0;box-sizing:border-box;font-family:'Poppins',sans-serif;}
-body{background:#0d0d0d;color:#fff;scroll-behavior:smooth}
+*{margin:0;padding:0;box-sizing:border-box;font-family:'Poppins',sans-serif}
+body{background:#0d0d0d;color:#fff}
 
-/* NAVBAR */
+/* NAV */
 nav{
-  position:fixed;top:0;width:100%;
-  background:rgba(0,0,0,.9);
-  display:flex;justify-content:space-between;
-  padding:14px 20px;z-index:1000;
+ position:fixed;top:0;width:100%;
+ background:#000;padding:14px 20px;
+ display:flex;justify-content:space-between;
+ z-index:1000
 }
 nav h1{font-size:18px}
 nav a{color:#fff;margin-left:15px;text-decoration:none;font-size:14px}
 
 /* HERO */
 .hero{
-  height:100vh;
-  background:
-  linear-gradient(rgba(0,0,0,.75),rgba(0,0,0,.85)),
-  url('https://images.unsplash.com/photo-1498050108023-c5249f4df085') center/cover;
-  display:flex;align-items:center;justify-content:center;
-  text-align:center;padding:20px;
+ height:100vh;
+ background:
+ linear-gradient(rgba(0,0,0,.75),rgba(0,0,0,.85)),
+ url('https://images.unsplash.com/photo-1498050108023-c5249f4df085') center/cover;
+ display:flex;align-items:center;justify-content:center;
+ text-align:center;padding:20px
 }
-.hero h2{font-size:36px;margin-bottom:10px;animation:fade 1.5s}
-.hero p{opacity:.9;margin-bottom:20px;animation:slide 1.5s}
+.hero h2{font-size:36px;margin-bottom:10px}
+.hero p{opacity:.9;margin-bottom:20px}
 .hero a{
-  padding:12px 25px;border-radius:30px;
-  background:linear-gradient(135deg,#25d366,#128c7e);
-  color:#fff;text-decoration:none;font-size:14px;
+ padding:12px 25px;border-radius:30px;
+ background:#25d366;color:#fff;
+ text-decoration:none;font-size:14px
 }
 
 /* SECTION */
@@ -45,43 +44,39 @@ nav a{color:#fff;margin-left:15px;text-decoration:none;font-size:14px}
 
 /* CARD */
 .card{
-  background:linear-gradient(145deg,#1a1a1a,#0c0c0c);
-  margin:15px auto;
-  max-width:360px;
-  padding:25px;border-radius:18px;
-  box-shadow:0 10px 30px rgba(0,0,0,.6);
-  transition:.4s;
+ background:linear-gradient(145deg,#1a1a1a,#0c0c0c);
+ margin:15px auto;
+ max-width:360px;
+ padding:25px;border-radius:18px;
+ box-shadow:0 10px 30px rgba(0,0,0,.6);
+ transition:.4s
 }
 .card:hover{transform:translateY(-8px)}
 .card i{font-size:32px;color:#25d366;margin-bottom:12px}
 
 /* BUTTON */
-.btn{
-  display:inline-block;margin-top:12px;
-  padding:10px 18px;border-radius:30px;
-  background:#25d366;color:#fff;
-  text-decoration:none;font-size:14px;
+.btn,.price-btn{
+ display:inline-block;margin-top:15px;
+ padding:12px 22px;border-radius:30px;
+ background:#25d366;color:#fff;
+ text-decoration:none;font-size:14px
 }
 
 /* FOOTER */
 footer{
-  padding:40px 20px;
-  background:#000;text-align:center
+ padding:40px 20px;
+ background:#000;text-align:center
 }
 footer p{opacity:.8;margin:6px 0}
 
 /* FLOAT WHATSAPP */
 .whatsapp{
-  position:fixed;right:20px;bottom:20px;
-  background:#25d366;color:#fff;
-  width:55px;height:55px;border-radius:50%;
-  display:flex;align-items:center;justify-content:center;
-  font-size:26px;z-index:1000;
+ position:fixed;right:20px;bottom:20px;
+ background:#25d366;color:#fff;
+ width:55px;height:55px;border-radius:50%;
+ display:flex;align-items:center;justify-content:center;
+ font-size:26px;z-index:1000
 }
-
-/* ANIMATION */
-@keyframes fade{from{opacity:0}to{opacity:1}}
-@keyframes slide{from{transform:translateY(20px);opacity:0}to{opacity:1}}
 </style>
 </head>
 
@@ -93,7 +88,10 @@ footer p{opacity:.8;margin:6px 0}
     <a href="#home">Home</a>
     <a href="#services">Services</a>
     <a href="#pricing">Pricing</a>
-    <a href="#contact">Contact</a>
+
+    <!-- AUTO DM CONTACT -->
+    <a href="https://wa.me/918587017626?text=Hello%20Aryan%20%F0%9F%91%8B%0AI%20want%20a%20website.%0APlease%20share%20details%20and%20pricing."
+    target="_blank">Contact</a>
   </div>
 </nav>
 
@@ -102,7 +100,7 @@ footer p{opacity:.8;margin:6px 0}
   <div>
     <h2>Aryan Web Studio</h2>
     <p>Professional Website Developer<br>Fast • Modern • Mobile Friendly</p>
-    <a href="https://wa.me/918587017626" target="_blank">Contact on WhatsApp</a>
+    <a href="https://wa.me/918587017626" target="_blank">WhatsApp Me</a>
   </div>
 </section>
 
@@ -125,7 +123,7 @@ footer p{opacity:.8;margin:6px 0}
 <div class="card">
 <i class="fa-solid fa-layer-group"></i>
 <h3>Landing Pages</h3>
-<p>High conversion one page sites</p>
+<p>High conversion single page websites</p>
 </div>
 
 <div class="card">
@@ -135,7 +133,7 @@ footer p{opacity:.8;margin:6px 0}
 </div>
 </section>
 
-<!-- PRICING -->
+<!-- PRICING WITH AUTO DM -->
 <section class="section" id="pricing">
 <h2>Pricing</h2>
 
@@ -143,27 +141,33 @@ footer p{opacity:.8;margin:6px 0}
 <h3>Basic</h3>
 <p style="font-size:22px">₹1,999</p>
 <p>1 Page Website</p>
-<a class="btn" href="https://wa.me/918587017626?text=I%20want%20Basic%20Website" target="_blank">Buy on WhatsApp</a>
+<a class="price-btn"
+href="https://wa.me/918587017626?text=Hello%20Aryan%20I%20want%20BASIC%20PLAN%20(%E2%82%B91999)."
+target="_blank">WhatsApp Now</a>
 </div>
 
 <div class="card">
 <h3>Standard</h3>
 <p style="font-size:22px">₹3,999</p>
 <p>3–5 Pages Website</p>
-<a class="btn" href="https://wa.me/918587017626?text=I%20want%20Standard%20Website" target="_blank">Buy on WhatsApp</a>
+<a class="price-btn"
+href="https://wa.me/918587017626?text=Hello%20Aryan%20I%20want%20STANDARD%20PLAN%20(%E2%82%B93999)."
+target="_blank">WhatsApp Now</a>
 </div>
 
 <div class="card">
 <h3>Premium</h3>
 <p style="font-size:22px">₹6,999</p>
 <p>Full Website + Auto DM</p>
-<a class="btn" href="https://wa.me/918587017626?text=I%20want%20Premium%20Website" target="_blank">Buy on WhatsApp</a>
+<a class="price-btn"
+href="https://wa.me/918587017626?text=Hello%20Aryan%20I%20want%20PREMIUM%20PLAN."
+target="_blank">WhatsApp Now</a>
 </div>
 </section>
 
-<!-- CONTACT -->
+<!-- CONTACT INFO -->
 <footer id="contact">
-<h2>Contact Me</h2>
+<h2>Contact</h2>
 <p>📞 8587017626</p>
 <p>📧 anitagupta89837@gmail.com</p>
 <p>📸 Instagram: @Cristhien_</p>
@@ -175,4 +179,4 @@ footer p{opacity:.8;margin:6px 0}
 </a>
 
 </body>
-</html>
+  </html>
